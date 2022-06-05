@@ -13,7 +13,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <MediaElement Name="BackgroundVideo" 
-                      Source="E:\work\ME\win10GL\win10GL\win10GL\Resources\background2.mp4" LoadedBehavior="Manual" 
+                      Source="Resources/background2.mp4" LoadedBehavior="Manual" 
                       UnloadedBehavior="Manual" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="1" Grid.Column="1" MediaEnded="BackgroundVideo_MediaEnded"/>
 
     </Grid>

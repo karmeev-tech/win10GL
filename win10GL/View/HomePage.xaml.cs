@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using win10GL.VM;
 
 namespace win10GL.View
 {
@@ -20,13 +21,10 @@ namespace win10GL.View
 
     public partial class HomePage : Window
     {
-        public static double _screenHeight = SystemParameters.WorkArea.Height;
-        public static double _screenWidth = SystemParameters.WorkArea.Width;
         public HomePage()
         {
             InitializeComponent();
-            //BackgroundVideo.Width = _screenWidth;
-            //BackgroundVideo.Height = _screenHeight;
+            BackgroundVideo.Source = new Uri(BackgroundController.RandomBackground(), UriKind.Relative);
             this.BackgroundVideo.Play();
         }
 
@@ -50,4 +48,7 @@ Application.Current.MainWindow.WindowState = WindowState.Maximized;
 
 BackgroundVideo.LoadedBehavior = MediaState.Manual;
             BackgroundVideo.UnloadedBehavior = MediaState.Manual;
+
+            //BackgroundVideo.Width = _screenWidth;
+            //BackgroundVideo.Height = _screenHeight;
 */

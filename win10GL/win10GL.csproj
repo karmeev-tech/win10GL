@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Core\Background\Background.cs" />
+    <Compile Include="VM\BackgroundController.cs" />
     <Page Include="View\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,15 +95,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Model\Core\" />
-    <Folder Include="VM\" />
+    <Resource Include="Resources\background2.mp4" />
+    <Resource Include="Resources\background1.mp4" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\background2.mp4" />
-    <Content Include="Resources\background.mp4" />
-    <Content Include="Resources\Pexels Videos 1851190.mp4" />
-    <Content Include="Resources\pexels-mart-production-7566035.mp4" />
+    <Content Include="Resources\background3.mp4" />
+    <Content Include="Resources\background4.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
