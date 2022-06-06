@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:win10GL"
              StartupUri="View/HomePage.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>

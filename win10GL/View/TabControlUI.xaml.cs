@@ -10,27 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using win10GL.VM;
 
 namespace win10GL.View
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for TabControlUI.xaml
     /// </summary>
-
-    public partial class HomePage : Window
+    public partial class TabControlUI : Page
     {
-        public HomePage()
+        public TabControlUI()
         {
             InitializeComponent();
-            BackgroundVideo.Source = new Uri(BackgroundController.RandomBackground(), UriKind.Relative);
-            this.BackgroundVideo.Play();
-        }
-
-        private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
-        {
-            this.BackgroundVideo.Position = TimeSpan.FromMilliseconds(1);
         }
     }
 }

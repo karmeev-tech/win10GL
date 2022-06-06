@@ -56,7 +56,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Core\Background\Background.cs" />
+    <Compile Include="Model\Core\IMenuItem.cs" />
+    <Compile Include="Model\Menu\Exit\Exit.cs" />
+    <Compile Include="Model\Menu\GamesFolder\GamesFolder.cs" />
+    <Compile Include="Model\Menu\Movies\Movies.cs" />
+    <Compile Include="Model\Menu\Settings\Settings.cs" />
+    <Compile Include="View\TabControlUI.xaml.cs">
+      <DependentUpon>TabControlUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ExitUI.xaml.cs">
+      <DependentUpon>ExitUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VM\BackgroundController.cs" />
+    <Compile Include="VM\MenuItemController.cs" />
     <Page Include="View\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,6 +80,14 @@
     <Compile Include="View\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\TabControlUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ExitUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,7 +115,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\Core\MenuItem\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background2.mp4" />
     <Resource Include="Resources\background1.mp4" />

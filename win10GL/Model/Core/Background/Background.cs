@@ -14,7 +14,8 @@ namespace win10GL.Model.Core.Background
         public static string GenerateLink()
         {
             Random videoNumber = new Random();
-            return @"..\..\Resources\background" + videoNumber.Next(1, 4).ToString() + ".mp4";
+            // + videoNumber.Next(1, 4).ToString() + 
+            return @"..\..\Resources\background1" + ".mp4";
         }
     }
 }
