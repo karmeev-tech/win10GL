@@ -9,8 +9,8 @@ namespace win10GL.Model.Core.Background
 {
     internal class Background
     {
-        private static double _screenHeight = SystemParameters.WorkArea.Height;
-        private static double _screenWidth = SystemParameters.WorkArea.Width;
+        //private static double _screenHeight = SystemParameters.WorkArea.Height;
+        //private static double _screenWidth = SystemParameters.WorkArea.Width;
         public static string GenerateLink()
         {
             Random videoNumber = new Random();

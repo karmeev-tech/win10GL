@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:win10GL"
              StartupUri="View/HomePage.xaml">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Dictionaries/SystemButton.xaml"/>
+                <ResourceDictionary Source="View/Dictionaries/ChiefBar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

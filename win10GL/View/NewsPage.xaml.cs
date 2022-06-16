@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace win10GL.View
 {
     /// <summary>
-    /// Interaction logic for UI.xaml
+    /// Interaction logic for NewsPage.xaml
     /// </summary>
-    public partial class UI : Page
+    public partial class NewsPage : Page
     {
-        public UI()
+        public NewsPage()
         {
             InitializeComponent();
-        }
-
-        private void ReturnLabel_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
         }
     }
 }

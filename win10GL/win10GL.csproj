@@ -61,14 +61,40 @@
     <Compile Include="Model\Menu\GamesFolder\GamesFolder.cs" />
     <Compile Include="Model\Menu\Movies\Movies.cs" />
     <Compile Include="Model\Menu\Settings\Settings.cs" />
+    <Compile Include="View\ExitPage.xaml.cs">
+      <DependentUpon>ExitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\GamesPage.xaml.cs">
+      <DependentUpon>GamesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TabControlUI.xaml.cs">
       <DependentUpon>TabControlUI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ExitUI.xaml.cs">
-      <DependentUpon>ExitUI.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VM\BackgroundController.cs" />
+    <Compile Include="VM\FrameController.cs" />
     <Compile Include="VM\MenuItemController.cs" />
+    <Resource Include="View\Dictionaries\ChiefBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="View\Dictionaries\SystemButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ExitPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GamesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +106,15 @@
     <Compile Include="View\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\TabControlUI.xaml">
+    <Page Include="View\NewsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ExitUI.xaml">
+    <Page Include="View\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TabControlUI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
