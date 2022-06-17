@@ -25,5 +25,7 @@ namespace win10GL.View
         {
             InitializeComponent();
         }
+
+        
     }
 }

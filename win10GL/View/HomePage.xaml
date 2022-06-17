@@ -1,24 +1,26 @@
-﻿<Window x:Class="win10GL.View.HomePage"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:win10GL.View"
+        xmlns:VM="clr-namespace:win10GL.VM" x:Class="win10GL.View.HomePage"
         mc:Ignorable="d"
         Title="win10GL" Height="445" Width="738" 
         WindowState="Maximized"
         WindowStyle="None" 
-        AllowDrop="True">
+        AllowDrop="True"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <MediaElement Name="BackgroundVideo" 
+        <MediaElement x:Name="BackgroundVideo" 
                       Source="Resources/background2.mp4" LoadedBehavior="Manual" 
                       UnloadedBehavior="Manual" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="1" Grid.Column="1" MediaEnded="BackgroundVideo_MediaEnded"/>
-        <Frame Name="Frame" Grid.ColumnSpan="2" Source="TabControlUI.xaml"/>
+        <Frame x:Name="Frame" Grid.ColumnSpan="2" Source="TabControlUI.xaml" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

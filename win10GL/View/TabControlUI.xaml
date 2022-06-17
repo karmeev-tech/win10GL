@@ -3,89 +3,80 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:win10GL.View"
+      xmlns:local="clr-namespace:win10GL"
+      xmlns:vm="clr-namespace:win10GL.VM"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TabControlUI">
-
+      Title="TabControlUI" ShowsNavigationUI="False">
+    <Page.DataContext>
+        <vm:MainViewModel/>
+    </Page.DataContext>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="799*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="64*"/>
-            <RowDefinition Height="363*"/>
-        </Grid.RowDefinitions>
-        <Frame 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="799*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23*"/>
+                <RowDefinition Height="64*"/>
+                <RowDefinition Height="363*"/>
+            </Grid.RowDefinitions>
+            <Frame x:Name="OutputPage" 
             Grid.Column="1" Grid.Row="2"
             NavigationUIVisibility ="Hidden"
+            Content="{Binding CurPage}"
             >
-            <Frame.Style>
-                <Style TargetType="Frame">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding ElementName=NewsButton, Path=IsFocused}" Value = "True">
-                            <Setter Property="Source" Value="NewsPage.xaml"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=GamesButton, Path=IsFocused}" Value = "True">
-                            <Setter Property="Source" Value="GamesPage.xaml"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=SettingsButton, Path=IsFocused}" Value = "True">
-                            <Setter Property="Source" Value="SettingsPage.xaml"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ElementName=ExitButton, Path=IsFocused}" Value = "True">
-                            <Setter Property="Source" Value="ExitPage.xaml"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Frame.Style>
-        </Frame>
-        <Grid x:Name="ChiefBarGrid" Grid.Column="1" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="124*"/>
-                <ColumnDefinition Width="102*"/>
-                <ColumnDefinition Width="128*"/>
-                <ColumnDefinition Width="143*"/>
-                <ColumnDefinition Width="69*"/>
-                <ColumnDefinition Width="233*"/>
-            </Grid.ColumnDefinitions>
+            </Frame>
+            <Grid x:Name="ChiefBarGrid" Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="124*"/>
+                    <ColumnDefinition Width="102*"/>
+                    <ColumnDefinition Width="128*"/>
+                    <ColumnDefinition Width="143*"/>
+                    <ColumnDefinition Width="91*"/>
+                    <ColumnDefinition Width="211*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button x:Name="NewsButton" 
-            Grid.Column="1" 
-            Content="News" 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center" 
-            Height="64" Width="100"
-            Style="{StaticResource ChiefBar}"/>
-
-            <Button x:Name="GamesButton" 
-                Grid.Column="2" 
-                Content="Games" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" 
-                Height="64" Width="128"
+            <Button x:Name="NewsButton" Command="{Binding OpenNewsPage}"
+                Grid.Column="1" 
+                Content="News" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Height="64" Width="102"
                 Style="{StaticResource ChiefBar}"/>
 
-            <Button x:Name="SettingsButton" 
+            <Button x:Name="GamesButton" Command="{Binding OpenGamesPage}"
+                Grid.Column="2" 
+                Content="Games" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Height="64" Width="128"
+                Style="{StaticResource ChiefBar}"/>
+                
+                <Button x:Name="SettingsButton" Command="{Binding OpenSettingsPage}"
+                Grid.Column="3" 
+                Content="Settings" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Height="64" Width="143"
+                Style="{StaticResource ChiefBar}"/>
+                
+                <Button x:Name="ExitButton" Command="{Binding OpenExitPage}"
+                Grid.Column="4" 
+                Content="Exit" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Height="64" Width="90"
+                Style="{StaticResource ChiefBar}"/>
+                
+            </Grid>
+        </Grid>
+</Page>
+<!--New Games Settings Exit
+    
+    <Button x:Name="SettingsButton" 
             Grid.Column="3" 
             Content="Settings" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Center" 
             Height="64" Width="142"
             Style="{StaticResource ChiefBar}"/>
-
-            <Button x:Name="ExitButton" 
-            Grid.Column="4" 
-            Content="Exit" 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center" 
-            Height="64" Width="70"
-            Style="{StaticResource ChiefBar}" RenderTransformOrigin="-2.493,0.688"/>
-        </Grid>
-    </Grid>
-</Page>
-<!--New Games Settings Exit
     
                             <DataTrigger Binding="{Binding ElementName=NewsButton, Path=IsFocused}" Value = "True">
                             <Setter Property="Source" Value="NewsPage.xaml"/>
