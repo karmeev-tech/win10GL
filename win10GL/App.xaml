@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="View/Dictionaries/SystemButton.xaml"/>
                 <ResourceDictionary Source="View/Dictionaries/ChiefBar.xaml"/>
+                <ResourceDictionary Source="View/Dictionaries/SystemLabel.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

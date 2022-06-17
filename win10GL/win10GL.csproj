@@ -103,6 +103,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Dictionaries\SystemLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ExitPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +174,8 @@
     <Resource Include="Resources\background1.mp4" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\hs.png" />
+    <Resource Include="Resources\Clock.png" />
     <Content Include="Resources\background3.mp4" />
     <Content Include="Resources\background4.mp4" />
   </ItemGroup>

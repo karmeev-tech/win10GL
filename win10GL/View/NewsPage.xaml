@@ -9,16 +9,6 @@
       Title="NewsPage">
 
     <Grid>
-        <Button Content="Version 0.0.1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="66" RenderTransformOrigin="0.5,0.5" Width="228" Style="{StaticResource SysButton}">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-
+        <Label Content="Version 0.0.2" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top" Style="{StaticResource SysLabel}"/>
     </Grid>
 </Page>

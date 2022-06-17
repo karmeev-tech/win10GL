@@ -7,35 +7,37 @@
       xmlns:vm="clr-namespace:win10GL.VM"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TabControlUI" ShowsNavigationUI="False">
+      Title="TabControlUI" ShowsNavigationUI="False" UseLayoutRounding="True">
     <Page.DataContext>
         <vm:MainViewModel/>
     </Page.DataContext>
     <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="799*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="23*"/>
-                <RowDefinition Height="64*"/>
-                <RowDefinition Height="363*"/>
-            </Grid.RowDefinitions>
-            <Frame x:Name="OutputPage" 
-            Grid.Column="1" Grid.Row="2"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="799*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="362*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="OutputPage" 
+            Grid.Column="1" Grid.Row="4"
             NavigationUIVisibility ="Hidden"
             Content="{Binding CurPage}"
             >
-            </Frame>
-            <Grid x:Name="ChiefBarGrid" Grid.Column="1" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="124*"/>
-                    <ColumnDefinition Width="102*"/>
-                    <ColumnDefinition Width="128*"/>
-                    <ColumnDefinition Width="143*"/>
-                    <ColumnDefinition Width="91*"/>
-                    <ColumnDefinition Width="211*"/>
-                </Grid.ColumnDefinitions>
+        </Frame>
+        <Grid x:Name="ChiefBarGrid" Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="124*"/>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="128*"/>
+                <ColumnDefinition Width="143*"/>
+                <ColumnDefinition Width="91*"/>
+                <ColumnDefinition Width="211*"/>
+            </Grid.ColumnDefinitions>
 
             <Button x:Name="NewsButton" Command="{Binding OpenNewsPage}"
                 Grid.Column="1" 
@@ -50,23 +52,42 @@
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
                 Height="64" Width="128"
                 Style="{StaticResource ChiefBar}"/>
-                
-                <Button x:Name="SettingsButton" Command="{Binding OpenSettingsPage}"
+
+            <Button x:Name="SettingsButton" Command="{Binding OpenSettingsPage}"
                 Grid.Column="3" 
                 Content="Settings" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
                 Height="64" Width="143"
                 Style="{StaticResource ChiefBar}"/>
-                
-                <Button x:Name="ExitButton" Command="{Binding OpenExitPage}"
+
+            <Button x:Name="ExitButton" Command="{Binding OpenExitPage}"
                 Grid.Column="4" 
                 Content="Exit" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
                 Height="64" Width="90"
                 Style="{StaticResource ChiefBar}"/>
-                
-            </Grid>
+
         </Grid>
+
+        <Grid x:Name="ClockGrid" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,5" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="736*"/>
+                <ColumnDefinition Width="41*"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="ClockPng" 
+                   RenderOptions.BitmapScalingMode="HighQuality"
+                   Grid.Column="2"  RenderTransformOrigin="0.5,0.5" 
+                   Source="/Resources/Clock.png" 
+                   StretchDirection="Both" Stretch="Uniform" Grid.IsSharedSizeScope="True" UseLayoutRounding="True"/>
+            <Label x:Name="TimeLabel" Grid.Column="1" Content="" Height="34" VerticalAlignment="Center" FontSize="20" Style="{StaticResource SysLabel}"/>
+        </Grid>
+
+    </Grid>
 </Page>
 <!--New Games Settings Exit
     
