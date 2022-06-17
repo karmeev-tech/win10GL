@@ -9,7 +9,20 @@
       Title="ExitPage">
 
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="272,225,0,0" VerticalAlignment="Top" Height="131" Width="298" Click="Button_Click"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="156*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="193*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="495*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Return to PC" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34" Width="194" Click="Button_Click" Style="{StaticResource SysButton}" Grid.Column="1" Grid.Row="1"/>
+        <Button Content="Reboot" HorizontalAlignment="Center" VerticalAlignment="Center" Height="34" Width="194" Style="{StaticResource SysButton}" Grid.Column="1" Grid.Row="2"/>
+        <Button Content="Turn off" HorizontalAlignment="Center" VerticalAlignment="Center" Height="33" Width="194" Style="{StaticResource SysButton}" Grid.Column="1" Grid.Row="3"/>
     </Grid>
 </Page>
