@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Media;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using win10GL.VM;
 
 namespace win10GL.View
@@ -24,13 +16,22 @@ namespace win10GL.View
         public HomePage()
         {
             InitializeComponent();
-            BackgroundVideo.Source = new Uri(BackgroundController.RandomBackground(), UriKind.Relative);
+
+            BackgroundMusic.Source = new Uri(@"..\..\Resources\backgroundMusic.wav", UriKind.Relative);
+            BackgroundVideo.Source = new Uri(@"..\..\Resources\background1.mp4", UriKind.Relative);
+
+            BackgroundMusic.Play();
             this.BackgroundVideo.Play();
         }
 
         private void BackgroundVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
             this.BackgroundVideo.Position = TimeSpan.FromMilliseconds(1);
+        }
+
+        private void BackgroundMusic_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            this.BackgroundMusic.Position = TimeSpan.FromMilliseconds(1);
         }
     }
 }

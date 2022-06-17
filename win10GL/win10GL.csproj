@@ -70,12 +70,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\Core\Background\Background.cs" />
-    <Compile Include="Model\Core\IMenuItem.cs" />
-    <Compile Include="Model\Menu\Exit\Exit.cs" />
-    <Compile Include="Model\Menu\GamesFolder\GamesFolder.cs" />
-    <Compile Include="Model\Menu\Movies\Movies.cs" />
-    <Compile Include="Model\Menu\Settings\Settings.cs" />
     <Compile Include="View\ExitPage.xaml.cs">
       <DependentUpon>ExitPage.xaml</DependentUpon>
     </Compile>
@@ -91,9 +85,7 @@
     <Compile Include="View\TabControlUI.xaml.cs">
       <DependentUpon>TabControlUI.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VM\BackgroundController.cs" />
     <Compile Include="VM\MainViewModel.cs" />
-    <Compile Include="VM\MenuItemController.cs" />
     <Compile Include="VM\ViewModelBase.cs" />
     <Resource Include="View\Dictionaries\ChiefBar.xaml">
       <SubType>Designer</SubType>
@@ -167,13 +159,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Core\MenuItem\" />
+    <Folder Include="Model\Core\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background2.mp4" />
     <Resource Include="Resources\background1.mp4" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\backgroundMusic.wav" />
+    <Content Include="Resources\chooseChiefItem3.wav" />
+    <Content Include="Resources\selectChiefItem.wav" />
+    <Content Include="Resources\selectChiefItem2.wav" />
     <Resource Include="Resources\hs.png" />
     <Resource Include="Resources\Clock.png" />
     <Content Include="Resources\background3.mp4" />

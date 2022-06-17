@@ -9,6 +9,6 @@
       Title="NewsPage">
 
     <Grid>
-        <Label Content="Version 0.0.2" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top" Style="{StaticResource SysLabel}"/>
+        <Label Content="Version 0.0.3" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top" Style="{StaticResource SysLabel}"/>
     </Grid>
 </Page>

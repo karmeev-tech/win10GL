@@ -20,6 +20,9 @@
         <MediaElement x:Name="BackgroundVideo" 
                       Source="Resources/background2.mp4" LoadedBehavior="Manual" 
                       UnloadedBehavior="Manual" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="1" Grid.Column="1" MediaEnded="BackgroundVideo_MediaEnded"/>
+        <MediaElement x:Name="BackgroundMusic" 
+                      Source="Resources/backgroundMusic.wav" LoadedBehavior="Manual" 
+                      UnloadedBehavior="Manual" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="1" Grid.Column="1" MediaEnded="BackgroundMusic_MediaEnded"/>
         <Frame x:Name="Frame" Grid.ColumnSpan="2" Source="TabControlUI.xaml" NavigationUIVisibility="Hidden"/>
 
     </Grid>

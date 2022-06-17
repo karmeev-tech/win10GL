@@ -20,8 +20,8 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="28*"/>
             <RowDefinition Height="11*"/>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="362*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="344*"/>
         </Grid.RowDefinitions>
         <Frame x:Name="OutputPage" 
             Grid.Column="1" Grid.Row="4"
@@ -32,40 +32,40 @@
         <Grid x:Name="ChiefBarGrid" Grid.Column="1" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="124*"/>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="149*"/>
+                <ColumnDefinition Width="167*"/>
                 <ColumnDefinition Width="102*"/>
                 <ColumnDefinition Width="128*"/>
-                <ColumnDefinition Width="143*"/>
-                <ColumnDefinition Width="91*"/>
-                <ColumnDefinition Width="211*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="NewsButton" Command="{Binding OpenNewsPage}"
+            <RadioButton x:Name="NewsButton" Command="{Binding OpenNewsPage}"
                 Grid.Column="1" 
                 Content="News" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Height="64" Width="102"
-                Style="{StaticResource ChiefBar}"/>
+                Height="63" Width="128"
+                Style="{StaticResource ChiefBar}" RenderTransformOrigin="0.5,0.5" MouseEnter="ChiefButton_MouseEnter" Click="ChiefButton_Click"/>
 
-            <Button x:Name="GamesButton" Command="{Binding OpenGamesPage}"
+            <RadioButton x:Name="GamesButton" Command="{Binding OpenGamesPage}"
                 Grid.Column="2" 
                 Content="Games" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Height="64" Width="128"
-                Style="{StaticResource ChiefBar}"/>
+                Height="62" Width="148"
+                Style="{StaticResource ChiefBar}" MouseEnter="ChiefButton_MouseEnter" Click="ChiefButton_Click"/>
 
-            <Button x:Name="SettingsButton" Command="{Binding OpenSettingsPage}"
+            <RadioButton x:Name="SettingsButton" Command="{Binding OpenSettingsPage}"
                 Grid.Column="3" 
                 Content="Settings" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Height="64" Width="143"
-                Style="{StaticResource ChiefBar}"/>
+                Height="64" Width="166"
+                Style="{StaticResource ChiefBar}" MouseEnter="ChiefButton_MouseEnter" Click="ChiefButton_Click"/>
 
-            <Button x:Name="ExitButton" Command="{Binding OpenExitPage}"
+            <RadioButton x:Name="ExitButton" Command="{Binding OpenExitPage}"
                 Grid.Column="4" 
                 Content="Exit" 
                 HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Height="64" Width="90"
-                Style="{StaticResource ChiefBar}"/>
+                Height="64" Width="102"
+                Style="{StaticResource ChiefBar}" MouseEnter="ChiefButton_MouseEnter" Click="ChiefButton_Click"/>
 
         </Grid>
 
@@ -86,6 +86,20 @@
                    StretchDirection="Both" Stretch="Uniform" Grid.IsSharedSizeScope="True" UseLayoutRounding="True"/>
             <Label x:Name="TimeLabel" Grid.Column="1" Content="" Height="34" VerticalAlignment="Center" FontSize="20" Style="{StaticResource SysLabel}"/>
         </Grid>
+
+
+        <MediaElement x:Name="SelectSound" 
+                      Source="Resources/selectChiefItem.wav" 
+                      LoadedBehavior="Manual" 
+                      UnloadedBehavior="Manual" 
+                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                      Stretch="Fill" Grid.RowSpan="1" Grid.Column="1"/>
+        <MediaElement x:Name="ChooseSound" 
+                      Source="Resources/chooseChiefItem.wav" 
+                      LoadedBehavior="Manual" 
+                      UnloadedBehavior="Manual" VerticalAlignment="Stretch" 
+                      HorizontalAlignment="Stretch" Stretch="Fill" 
+                      Grid.RowSpan="1" Grid.Column="1"/>
 
     </Grid>
 </Page>

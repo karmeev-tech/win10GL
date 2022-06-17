@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,13 +23,13 @@ namespace win10GL.View
     /// </summary>
     public partial class TabControlUI : Page
     {
-        DispatcherTimer timer = new DispatcherTimer();
+        DispatcherTimer _timer = new DispatcherTimer();
         public TabControlUI()
         {
             InitializeComponent();
-            timer.Tick += new EventHandler(TimerTick);
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Start();
+            _timer.Tick += new EventHandler(TimerTick);
+            _timer.Interval = new TimeSpan(0, 0, 1);
+            _timer.Start();
         }
 
         private void TimerTick(object sender,EventArgs e)
@@ -36,6 +37,17 @@ namespace win10GL.View
             DateTime date = DateTime.Now;
             TimeLabel.Content = date.ToLongTimeString();
         }
-        
+
+        private void ChiefButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ChooseSound.Source = new Uri(@"..\..\Resources\chooseChiefItem3.wav", UriKind.Relative);
+            ChooseSound.Play();
+        }
+
+        private void ChiefButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectSound.Source = new Uri(@"..\..\Resources\selectChiefItem.wav", UriKind.Relative);
+            SelectSound.Play();
+        }
     }
 }
